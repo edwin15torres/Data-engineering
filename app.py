@@ -2,7 +2,7 @@ import pandas as pd
 import json
 
 # Leer el archivo JSON
-with open('data.json', 'r') as file:
+with open('source/data.json', 'r') as file:
     data = json.load(file)
 
 # Crear un DataFrame a partir del JSON
