@@ -1,6 +1,6 @@
 import pandas as pd
 import requests
-import sqlite3
+from sqlalchemy import create_engine
 
 # URL que contiene los datos JSON
 url = 'https://www.datos.gov.co/resource/tukn-wveu.json'
@@ -12,14 +12,25 @@ data = response.json()
 # Crear un DataFrame a partir del JSON
 df = pd.DataFrame(data)
 
-# Conectar a la base de datos SQLite (o crearla si no existe)
-conn = sqlite3.connect('database.db')
+# Datos de conexión a SQL Server
+server = 'DESKTOP-US0NNJK'
+database = 'temporal'
+# username = 'tu_usuario'
+# password = 'tu_contraseña'
+driver = 'ODBC Driver 17 for SQL Server'
 
-# Exportar los datos del DataFrame a la tabla 'datos' en la base de datos SQLite
-df.to_sql('datos', conn, if_exists='replace', index=False)
+# Crear la cadena de conexión
+connection_string = f'mssql+pyodbc://@{server}/{database}?driver={driver}&trusted_connection=yes'
+# connection_string = f'mssql+pyodbc://{username}:{password}@{server}/{database}?driver={driver}'
 
-# Cerrar la conexión a la base de datos
-conn.close()
+# Crear el engine de SQLAlchemy
+engine = create_engine(connection_string)
+
+# Exportar los datos del DataFrame a la tabla 'datos' en la base de datos SQL Server
+df.to_sql('tabla', engine, if_exists='replace', index=False)
+
+# Cerrar la conexión al engine
+engine.dispose()
 
 # Imprimir el tamaño del DataFrame
 print(df)
