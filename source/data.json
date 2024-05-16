@@ -1,32 +1,34 @@
 [
     {
-        "columna1": "valor1",
-        "columna2": "valor2",
-        "columna3": "valor3",
-        "columna4": "valor4"
+        "fecha_hecho": "2021-10-01T00:00:00.000",
+        "cod_depto": "05",
+        "departamento": "ANTIOQUIA",
+        "cod_muni": "05001",
+        "municipio": "MEDELLIN",
+        "cantidad": "1"
     },
     {
-        "columna1": "valor5",
-        "columna2": "valor6",
-        "columna3": "valor7",
-        "columna4": "valor8"
+        "fecha_hecho": "2021-10-01T00:00:00.000",
+        "cod_depto": "05",
+        "departamento": "BOGOTA DC",
+        "cod_muni": "05001",
+        "municipio": "BOGOTA",
+        "cantidad": "2"
     },
     {
-        "columna1": "valor9",
-        "columna2": "valor10",
-        "columna3": "valor11",
-        "columna4": "valor12"
+        "fecha_hecho": "2021-10-02T00:00:00.000",
+        "cod_depto": "05",
+        "departamento": "CUNDINAMARCA",
+        "cod_muni": "05001",
+        "municipio": "SUEZCA",
+        "cantidad": "1"
     },
     {
-        "columna1": "valor13",
-        "columna2": "valor14",
-        "columna3": "valor15",
-        "columna4": "valor16"
-    },
-    {
-        "columna1": "valor17",
-        "columna2": "valor18",
-        "columna3": "valor19",
-        "columna4": "valor20"
+        "fecha_hecho": "2021-10-02T00:00:00.000",
+        "cod_depto": "05",
+        "departamento": "META",
+        "cod_muni": "05001",
+        "municipio": "CASANARE",
+        "cantidad": "1"
     }
 ]

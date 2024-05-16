@@ -19,4 +19,4 @@ df.to_sql('datos', conn, if_exists='replace', index=False)
 conn.close()
 
 # Imprimir el tamaño del DataFrame
-print(df.shape)
+print(df)
